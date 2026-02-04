@@ -1,19 +1,30 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import "./Navbar.css";
 
 export default function Navbar({ theme, setTheme }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(prev => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
     <nav className="navbar">
-      <h2 className="logo">🎬 Movie Recommender</h2>
+      <h2 className="logo">🎬 Movie Recommender App</h2>
 
-      <div className="nav-links">
-        <NavLink to="/" end>Home</NavLink>
-        <NavLink to="/recommend">Recommend</NavLink>
-        <NavLink to="/about">About</NavLink>
+      {/* Hamburger (mobile) */}
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
+
+      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
+        <NavLink to="/recommend" onClick={() => setMenuOpen(false)}>Recommend</NavLink>
+        <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
 
         <button className="theme-btn" onClick={toggleTheme}>
           {theme === "dark" ? "🌞 Light" : "🌙 Dark"}
@@ -22,5 +33,4 @@ export default function Navbar({ theme, setTheme }) {
     </nav>
   );
 }
-
 

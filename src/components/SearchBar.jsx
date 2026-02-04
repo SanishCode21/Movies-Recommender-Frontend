@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./SearchBar.css";
 
 function SearchBar({ movieList }) {
   const [query, setQuery] = useState("");
@@ -16,30 +17,34 @@ function SearchBar({ movieList }) {
 
   return (
     <form className="search-bar" onSubmit={handleSubmit}>
-      {/* Dropdown */}
-      <select
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      >
-        <option value="">Select a movie</option>
-        {movieList.map((movie, index) => (
-          <option key={index} value={movie}>
-            {movie}
-          </option>
-        ))}
-      </select>
+      <div className="search-fields">
+        {/* Dropdown */}
+        <select
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        >
+          <option value="">Select a movie</option>
+          {movieList.map((movie, index) => (
+            <option key={index} value={movie}>
+              {movie}
+            </option>
+          ))}
+        </select>
 
-      <span className="or-text">OR</span>
+        <span className="or-text">OR</span>
 
-      {/* Manual input */}
-      <input
-        type="text"
-        placeholder="Type a movie name..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
+        {/* Manual input */}
+        <input
+          type="text"
+          placeholder="Type a movie name..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </div>
 
-      <button type="submit">Recommend</button>
+      <button type="submit" className="search-btn">
+        Recommend
+      </button>
     </form>
   );
 }

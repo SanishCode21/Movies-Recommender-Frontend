@@ -5,13 +5,6 @@ A production-ready **Movie Recommendation System** built using
 
 ---
 
-## 🔗 Live Demo
-
-- Frontend: https://movie-recommender.vercel.app  
-- Backend API: https://movies-recommender-backend-zog1.onrender.com  
-
----
-
 ## 🧠 Project Overview
 
 This application recommends movies based on user selection using **content-based filtering**.
@@ -19,6 +12,24 @@ It demonstrates real-world full-stack practices including API design, CORS handl
 management, and cloud deployment.
 
 ---
+
+## 🔗 Live Demo
+
+- Frontend: https://movie-recommender.vercel.app  
+- Backend API: https://movies-recommender-backend-zog1.onrender.com  
+
+
+## 📸 UI Preview
+
+| Desktop | Mobile |
+|--------|--------|
+| ![](assets/des6.png) | ![](assets/mobile.png) |
+| ![](assets/des3.jpg) | ![](assets/mobile.png) |
+| ![](assets/des4.jpg) | ![](assets/mobile.png) |
+| ![](assets/des2.jpg) | ![](assets/mobile.png) |
+| ![](assets/des1.jpg) | ![](assets/mobile.png) |
+| ![](assets/des5.png) | ![](assets/mobile.png) |
+
 
 ## Tech Stack
 

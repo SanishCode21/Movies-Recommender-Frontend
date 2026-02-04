@@ -147,4 +147,4 @@ Give it a ⭐ on GitHub - it helps a lot!
 This is **resume-ready**.
 
 ---
-# `THANK FOR VISITING`
+# `THANK YOU FOR VISITING`

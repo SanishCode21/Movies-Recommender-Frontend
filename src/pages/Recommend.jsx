@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import MovieGrid from "../components/movieGrid";
+import MovieGrid from "../components/MovieGrid";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
